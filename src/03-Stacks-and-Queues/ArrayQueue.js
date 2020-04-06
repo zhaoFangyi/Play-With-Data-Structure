@@ -1,8 +1,8 @@
 const MyArray = require('../02-Arrays/MyArray_js');
 
-class ArrayStack {
+class ArrayQueue {
   constructor (capacity = 10) {
-    this.array = new MyArray(capacity)
+    this.array = new MyArray(capacity);
   }
 
   getSize () {
@@ -17,30 +17,30 @@ class ArrayStack {
     return this.array.getCapacity();
   }
 
-  push (e) {
+  enqueue (e) {
     this.array.addLast(e);
   }
 
-  pop () {
-    this.array.removeLast();
+  dequeue () {
+    this.array.removeFirst();
   }
 
-  peek () {
-    return this.array.getLast()
+  getFront () {
+    return this.array.getFirst()
   }
 
   toString () {
-    let res = `ArrayStack: size = ${this.getSize()}, capacity=${this.getCapacity()}`;
-    res+= 'Stack: ['
+    let res = `ArrayQueue: size = ${this.getSize()}, capacity=${this.getCapacity()}`;
+    res+= 'Queue: front ['
     for (let i = 0; i < this.getSize(); i++) {
       res += this.array.get(i)
       if (i !== this.getSize() -1) {
         res += '，'
       }
     }
-    res += '] top'
+    res += '] tail'
     return res.toString()
   }
 }
 
-module.exports = ArrayStack
+module.exports = ArrayQueue
