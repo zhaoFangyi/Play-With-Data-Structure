@@ -1,6 +1,6 @@
 const ArrayQueue = require('./ArrayQueue');
 const LoopQueue = require('./LoopQueue');
-
+const LinkedListQueue = require('./LinkedListQueue');
 // let arr = new ArrayQueue(10)
 
 // arr.enqueue('tom')
@@ -17,7 +17,8 @@ const LoopQueue = require('./LoopQueue');
 // console.log(arr.getFront());
 
 
-let arr = new LoopQueue(10)
+// let arr = new LoopQueue(10)
+let arr = new LinkedListQueue(10)
 
 arr.enqueue('tom')
 console.log(arr.toString())
