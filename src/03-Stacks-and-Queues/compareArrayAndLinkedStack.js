@@ -4,9 +4,9 @@ const ArrayStack = require('./ArrayStack');
 function testStack (stack, opCount) {
   const startTime = new Date().getTime();
 
-  let random = parseInt(Math.random() * 1000);
 
   for (let i = 0; i < opCount; i++) {
+    let random = parseInt(Math.random() * 1000);
     stack.push(random);
   }
   for (let i = 0; i < opCount; i++) {
