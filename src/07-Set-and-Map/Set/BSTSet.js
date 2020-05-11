@@ -1,4 +1,4 @@
-const BST = require('../06-Binary-Search-Tree/BST')
+const BST = require('../../06-Binary-Search-Tree/BST')
 
 class BSTSet {
   constructor() {

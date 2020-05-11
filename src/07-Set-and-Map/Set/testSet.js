@@ -1,5 +1,6 @@
-const FileOperation = require('./FileOperation')
+const FileOperation = require('../FileOperation')
 const BSTSet = require('./BSTSet')
+const path = require('path')
 
 const fileOperation = new FileOperation()
 
@@ -9,7 +10,8 @@ const words1 = {
   total: 0,
   list: []
 }
-const filePath = process.cwd() + '/pride-and-prejudice.txt'
+const filePath = path.resolve(__dirname, '../pride-and-prejudice.txt')
+console.log('filePath', filePath)
 
 if (fileOperation.readFile(filePath, words1)) {
   const { total, list } = words1

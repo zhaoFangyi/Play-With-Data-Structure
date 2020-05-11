@@ -1,4 +1,4 @@
-const LinkedList = require('../04-Linked-List/LinkedList_dummyHead')
+const LinkedList = require('../../04-Linked-List/LinkedList_dummyHead')
 
 class LinkedListSet {
   constructor() {
