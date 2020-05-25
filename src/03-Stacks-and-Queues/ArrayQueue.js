@@ -1,40 +1,40 @@
-const MyArray = require('../02-Arrays/MyArray_js');
+const MyArray = require('../02-Arrays/MyArray')
 
 class ArrayQueue {
-  constructor (capacity = 10) {
-    this.array = new MyArray(capacity);
+  constructor(capacity = 10) {
+    this.array = new MyArray(capacity)
   }
 
-  getSize () {
-    return this.array.getSize();
+  getSize() {
+    return this.array.getSize()
   }
 
-  isEmpty () {
-    return this.array.isEmpty();
+  isEmpty() {
+    return this.array.isEmpty()
   }
 
-  getCapacity () {
-    return this.array.getCapacity();
+  getCapacity() {
+    return this.array.getCapacity()
   }
 
-  enqueue (e) {
-    this.array.addLast(e);
+  enqueue(e) {
+    this.array.addLast(e)
   }
 
-  dequeue () {
-    this.array.removeFirst();
+  dequeue() {
+    this.array.removeFirst()
   }
 
-  getFront () {
+  getFront() {
     return this.array.getFirst()
   }
 
-  toString () {
-    let res = `ArrayQueue: size = ${this.getSize()}, capacity=${this.getCapacity()}`;
-    res+= 'Queue: front ['
+  toString() {
+    let res = `ArrayQueue: size = ${this.getSize()}, capacity=${this.getCapacity()}`
+    res += 'Queue: front ['
     for (let i = 0; i < this.getSize(); i++) {
       res += this.array.get(i)
-      if (i !== this.getSize() -1) {
+      if (i !== this.getSize() - 1) {
         res += '，'
       }
     }
